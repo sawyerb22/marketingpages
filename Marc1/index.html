@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marc | Design1</title>
+    <link rel="stylesheet" type="text/css" href="fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/card-carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
+    <script src="js/modernizr.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Top Navigation -->
+      <div class="contact-nav">
+       <img class="user-mug" src="img/avatar.jpg">
+        <div class="user-info">
+          <h4>Marc Garner</h4>
+          <p class="rank"> Marketing Distributor <br> 154962</p>
+        </div>
+        <div class="content-right">
+          <a href="" class="splash-code"><i class="icon-barcode"></i> <span>Splash Code</span></a>
+          <a href="" class="send-card"><i class="icon-envelope"></i> <span>Send Free Card</span></a>
+        </div>
+      </div>
+      <section id="photostack-1" class="photostack photostack-start">
+        <div>
+          <figure>
+            <a href="#" class="photostack-img horizontal-card"><img src="img/cards/easter.jpg" alt="img01"/></a>
+          </figure>
+          <figure>
+            <a href="#" class="photostack-img"><img src="img/cards/ewe.jpg" alt="img02"/></a>
+          </figure>
+          <figure>
+            <a href="#" class="photostack-img"><img src="img/cards/feel.jpg" alt="img03"/></a>
+          </figure>
+          <figure>
+            <a href="#" class="photostack-img"><img src="img/cards/happy_birthday_son.jpg" alt="img04"/></a>
+          </figure>
+          <figure>
+            <a href="#" class="photostack-img"><img src="img/cards/happy.jpg" alt="img05"/></a>
+          </figure>
+          <figure>
+            <a href="#" class="photostack-img"><img src="img/cards/mahalo.jpg" alt="img06"/></a>
+          </figure>
+          <figure>
+            <a href="#" class="photostack-img horizontal-card"><img src="img/cards/thank_you.jpg" alt="img07"/></a>
+          </figure>
+          <figure>
+            <a href="#" class="photostack-img horizontal-card"><img src="img/cards/thank_you2.jpg" alt="img08"/></a>
+          </figure>
+          <!-- the attr of 'data-dummy' makes images show up but not selectable throught the carousel -->
+          <figure data-dummy>
+            <a href="#" class="photostack-img"><img src="img/cards/30731_.jpg" alt="img09"/></a>
+          </figure>
+           <figure data-dummy>
+            <a href="#" class="photostack-img horizontal-card"><img src="img/cards/7020565_.jpg" alt="img10"/></a>
+          </figure>
+           <figure data-dummy>
+            <a href="#" class="photostack-img horizontal-card"><img src="img/cards/8852286_.jpg" alt="img11"/></a>
+          </figure>
+           <figure data-dummy>
+            <a href="#" class="photostack-img horizontal-card"><img src="img/cards/46647305_.jpg" alt="img12"/></a>
+          </figure>
+           <figure data-dummy>
+            <a href="#" class="photostack-img horizontal-card"><img src="img/cards/58569315_.jpg" alt="img13"/></a>
+          </figure>
+           <figure data-dummy>
+            <a href="#" class="photostack-img"><img src="img/cards/59199067_.jpg" alt="img14"/></a>
+          </figure>
+           <figure data-dummy>
+            <a href="#" class="photostack-img horizontal-card"><img src="img/cards/63190241_.jpg" alt="img15"/></a>
+          </figure>
+        </div>
+      </section>
+      <section class="blockquote">
+        <h1>"Changing lives... One Card at a time"</h1>
+      </section>
+      <section class="video-toggle cards">
+        <div class="section-overlay">
+         <div class="overlay-content">
+           <h2>Welcome To <br> Sendoutcards</h2>
+           <a href="#" id="player"><i class="icon-play"></i></a>
+         </div>
+        </div>
+      </section>
+      <section class="feature">
+        <h1>Testimonials</h1>
+        <div class="content-center">
+          <div class="content-box"></div>
+          <div class="content-box"></div>
+          <div class="content-box"></div>
+        </div>
+
+      </section>
+      <section class="feature">
+
+      </section>
+    </div><!-- /container -->
+
+    <div class="global-modal">
+      <div class="page-overlay">
+        <div class="global-modal_contents modal-transition">
+            <div class="close-modal">
+                <span class="modal-close">X</span>
+            </div>
+            <div class="modal-body">
+              <div class="iframe-ratio">
+                <iframe id="Vimeo" class="iframe" src="//fast.wistia.net/embed/iframe/2kvkdqvlxk" allowtransparency="true" frameborder="0" scrolling="no" name="wistia_embed" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" width="100%" height="555"></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/photostack.js"></script>
+    <script>
+      // [].slice.call( document.querySelectorAll( '.photostack' ) ).forEach( function( el ) { new Photostack( el ); } );
+
+      new Photostack( document.getElementById( 'photostack-1' ), {
+        callback : function( item ) {
+          //console.log(item)
+        }
+      } );
+
+    </script>
+    <script>
+      var globalModal = $('.global-modal');
+      $( "#player" ).on( "click", function(e) {
+        e.preventDefault();
+        $( globalModal ).toggle();
+      });
+      $( ".modal-close" ).on( "click", function() {
+        $( globalModal ).hide();
+        // target iframes with src attribute containing 'youtube'
+        // (within the facebox-generated .popup wrapper).
+        var vid = jQuery('.iframe-ratio iframe[src*="//fast.wistia.net/embed/iframe/2kvkdqvlxk"]');
+        // if such an element exists
+        if ( vid.length > 0 ){
+          // get iframe's src attribute and cache it to a variable
+          var src = vid.attr('src');
+          // empty the iframe's src attribute
+          // (this will kill the video playing)
+          vid.attr('src', '');
+          // and restore the iframe src url, ready to be played
+          // again when the lightbox is displayed
+          vid.attr('src', src);
+        }
+      });
+    </script>
+  </body>
+</html>
